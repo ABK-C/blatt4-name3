@@ -13,16 +13,16 @@ double zufall(int a, int c, int m){
   
   i =(a*i+c)%m;
   
-  return (i)/(m);
+  return double(i)/double(m);
 }
 
 int main() {
 
 using namespace std;
 
-const int a = 5;
-const int c = 3;
-const int m = 16;
+const int a = 205;
+const int c = 29573;
+const int m = 139968;
 double nin = 0;
 
 for (int i=0; i < n; ++i) {
@@ -30,7 +30,7 @@ for (int i=0; i < n; ++i) {
 double x = zufall(a, c, m);
 double y = zufall(a, c, m);
   
-  if (sqrt((x*x+y*y)) < 1) {
+  if (sqrt((x*x+y*y)) < 1){
       
       nin++;
        
@@ -38,7 +38,7 @@ double y = zufall(a, c, m);
 
 }
 
-double pi = 4*(nin/n);
+double pi = (4*(nin/n));
 double p = M_PI/4;
 double e = p*n;
 double v = p*(1-p)*n;
